@@ -9,7 +9,7 @@
 
 <img align="center" src="css/print_do_projeto.png" alt="imagem projeto quizz"/>
 
-#### Clica ne link e divirta-se 👉 <a href="https://www.behance.net/arymanreis" target="_blank"></a>
+#### Clica ne link e divirta-se 👉 <a href="https://arymanreis.github.io/Quizz_Surf/" target="_blank">https://arymanreis.github.io/Quizz_Surf/</a>
 
 #### Tecnologias Usadas no projeto
 
