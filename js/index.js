@@ -117,13 +117,85 @@ questions[i].answers.forEach(function(answer, i) {
 
     // Inserir um evvento de clique no botão
     answerTemplate.addEventListener("click", function(){
-        console.log(this);
+        checkAnswer(this);
     });
 });
 
 // Incrementar o número da questão
 actualQuestion++;
 }
+
+// Verificar resposta do usuário
+function checkAnswer(btn) {
+    const buttons = answersBox.querySelectorAll("button");
+
+    buttons.forEach(function(button) {
+
+        if(button.getAttribute("correct-answer") === "true") {
+            button.classList.add("correct-answer");
+
+        if(btn === button) {
+            points++;
+        }
+
+        } else {
+            button.classList.add("wrong-answer");
+        }
+    });
+
+    nextQuestion();
+}
+
+function nextQuestion() {
+    setTimeout(function() {
+        if(actualQuestion >= questions.length) {
+            showSuccessMessage();
+            return;
+        }
+
+        createQuestion(actualQuestion);
+
+    }, 1500);
+}
+
+// Exibir a tela final
+function showSuccessMessage() {
+    
+    hideOrShowQuizz();
+
+    const score = ((points / questions.length) * 100).toFixed(2);
+
+    const displayScore = document.querySelector("#display-score span");
+
+    displayScore.textContent = score.toString();
+
+    const correctAnswers = document.querySelector("#correct-answers");
+    
+    correctAnswers.textContent = points;
+
+    const totalQuestions = document.querySelector("#questions-qty");
+    totalQuestions.textContent = questions.length;
+
+}
+
+// Mostra ou esconde o score
+function hideOrShowQuizz() {
+    quizzContainer.classList.toggle("hide");
+    scoreContainer.classList.toggle("hide");
+} 
+
+
+// Reiniciar Quizz
+const restartBtn = document.querySelector("#restart");
+
+restartBtn.addEventListener("click", function() {
+
+    actualQuestion = 0;
+    points = 0;
+    hideOrShowQuizz();
+    init();
+    
+});
 
 // Inicialização do Quizz
 init();
