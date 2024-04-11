@@ -4,7 +4,7 @@
 - Prof: Matheus Battiste
 - Intituição: Udemy
 
-#### Print do projeto
+#### Imagem do projeto
 ##### Nome: Quizz de surf (Perguntas sobre o universo do surf).
 
 <img align="center" src="css/print_do_projeto.png" alt="imagem projeto quizz"/>
@@ -25,4 +25,6 @@
 - Whatsapp: 21 98642-6569
 <div>
 <a href="https://www.behance.net/arymanreis" target="_blank"><img align="center" alt="Visual Studeo Code" src="https://img.shields.io/badge/-Behance-blue?style=for-the-badge&logo=behance&logoColor=white" target="_blank"/></a>
+<a href="https://www.linkedin.com/in/aryman-garcia-reis-16347629b/" target="_blank"><img align="center" alt="Visual Studeo Code" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"/></a>
+
 </div>
